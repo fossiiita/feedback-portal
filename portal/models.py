@@ -46,3 +46,26 @@ class Feedback_Theory(models.Model):
 
 	def __str__(self):
 		return self.student.course_name.name + ' - ' + self.student.professor.user.username
+
+class Feedback_Lab(models.Model):
+	student = models.ForeignKey(Professor_And_Students)
+	mcq_1 = models.IntegerField()
+	mcq_2 = models.IntegerField()
+	mcq_3 = models.IntegerField()
+	textual_question_1 = models.CharField(max_length=500)
+	textual_question_2 = models.CharField(max_length=500)
+	feedback_given_at = models.DateTimeField(auto_now_add=True)
+
+	def __str__(self):
+		return self.student.course_name.name + ' - ' + self.student.professor.user.username
+
+class Permissions(models.Model):
+	user = models.ForeignKey(settings.AUTH_USER_MODEL)
+	dean_or_director = models.BooleanField(default=False)
+
+	class Meta:
+		permissions = (("can_view_superview", "can view superview"),
+			("can_view_normalview", "can view normalview"),
+			)
+	def __str__(self):
+		return self.user.username					
