@@ -1,0 +1,392 @@
+{% extends 'portal/base.html' %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% block title %}Portal-Fill{% endblock %}
+{% block extend_head %}
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Web Starter Kit">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+  <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+
+  <!-- Color the status bar on mobile devices -->
+  <meta name="theme-color" content="#2F3BA2">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <!-- Material Design icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <!-- Material Design Lite page styles:
+    You can choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html
+    Format: material.color1-color2.min.css, some examples:
+    material.red-teal.min.css
+    material.blue-orange.min.css
+    material.purple-indigo.min.css
+  -->
+  <link rel="stylesheet" href="{% static 'css/fill_feedback(material).css' %}">
+
+  <!-- Your styles -->
+  <link rel="stylesheet" href="{% static 'css/fill_feedback(main).css' %}">
+{% endblock %}
+{% block content %}
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header mdl-layout__header--scroll mdl-layout__header--transparent">
+      <div class="mdl-layout__header-row">
+
+       <span class="mdl-layout-title">Welcome USERNAME</span>
+       <div class="mdl-layout-spacer"></div>
+       <nav class="mdl-navigation">
+        <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="/">LOGOUT</a>
+      </nav>
+
+    </div>
+    <div class="mdl-layout__header mdl-layout__header--transparent">
+     <span class="mdl-layout-title" style="margin: 0 auto;">SELECT THE COURSE TO GIVE FEEDBACK</span>
+   </div>
+   <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-layout__header--transparent">
+    <a href="#overview" class="mdl-layout__tab is-active"><b>IDST230C</b></a>
+    <a href="#featuress" class="mdl-layout__tab"><b>IDST230C</b></a>
+    <a href="#featuress1" class="mdl-layout__tab"><b>IDST230C</b></a>
+    <a href="#featuress2" class="mdl-layout__tab"><b>IDST230C</b></a>
+    <a href="#featuress3" class="mdl-layout__tab"><b>IDST230C</b></a>
+  </div>
+</header>
+<main class="mdl-layout__content">
+  <div class="mdl-layout__tab-panel is-active" id="overview">
+    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--24dp">
+      <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+        <div class="mdl-card__supporting-text mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
+        </div>
+        </div>
+
+
+    
+    
+        <div class="mdl-card__supporting-text mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
+        </div>
+        </div>
+
+    
+    
+        <div class="mdl-card__supporting-text mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
+        </div>
+        </div>
+
+    
+    
+        <!-- Floating Multiline Textfield -->
+        
+       <div class="mdl-card__supporting-text mdl-grid">
+       <div class="mdl-cell mdl-cell--6-col"><label style="font-size: 2em;">This is a textual question</label></div>
+  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
+    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+  </div>
+  </div>
+
+    
+        <div class="mdl-card__supporting-text mdl-grid">
+       <div class="mdl-cell mdl-cell--6-col"><label style="font-size: 2em;">This is a textual question</label></div>
+  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
+    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+  </div>
+  </div>
+
+    
+</section>
+  </div>
+  <div class="mdl-layout__tab-panel" id="featuress">
+    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--24dp">
+       <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+        <div class="mdl-card__supporting-text mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
+        </div>
+        </div>
+
+
+    
+    
+        <div class="mdl-card__supporting-text mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
+        </div>
+        </div>
+
+    
+    
+        <div class="mdl-card__supporting-text mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
+        </div>
+        </div>
+
+    
+    
+        <!-- Floating Multiline Textfield -->
+        
+       <div class="mdl-card__supporting-text mdl-grid">
+       <div class="mdl-cell mdl-cell--6-col"><label style="font-size: 2em;">This is a textual question</label></div>
+  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
+    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+  </div>
+  </div>
+
+    
+        <div class="mdl-card__supporting-text mdl-grid">
+       <div class="mdl-cell mdl-cell--6-col"><label style="font-size: 2em;">This is a textual question</label></div>
+  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
+    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+  </div>
+  </div>
+    </section>
+  </div>
+  <div class="mdl-layout__tab-panel" id="featuress1">
+    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--24dp">
+     <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+        <div class="mdl-card__supporting-text mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
+        </div>
+        </div>
+
+
+    
+    
+        <div class="mdl-card__supporting-text mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
+        </div>
+        </div>
+
+    
+    
+        <div class="mdl-card__supporting-text mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
+        </div>
+        </div>
+
+    
+    
+        <!-- Floating Multiline Textfield -->
+        
+       <div class="mdl-card__supporting-text mdl-grid">
+       <div class="mdl-cell mdl-cell--6-col"><label style="font-size: 2em;">This is a textual question</label></div>
+  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
+    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+  </div>
+  </div>
+
+    
+        <div class="mdl-card__supporting-text mdl-grid">
+       <div class="mdl-cell mdl-cell--6-col"><label style="font-size: 2em;">This is a textual question</label></div>
+  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
+    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+  </div>
+  </div>
+    </section>
+  </div>
+  <div class="mdl-layout__tab-panel" id="featuress2">
+    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--24dp">
+     <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+        <div class="mdl-card__supporting-text mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
+        </div>
+        </div>
+
+
+    
+    
+        <div class="mdl-card__supporting-text mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
+        </div>
+        </div>
+
+    
+    
+        <div class="mdl-card__supporting-text mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
+        </div>
+        </div>
+
+    
+    
+        <!-- Floating Multiline Textfield -->
+        
+       <div class="mdl-card__supporting-text mdl-grid">
+       <div class="mdl-cell mdl-cell--6-col"><label style="font-size: 2em;">This is a textual question</label></div>
+  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
+    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+  </div>
+  </div>
+
+    
+        <div class="mdl-card__supporting-text mdl-grid">
+       <div class="mdl-cell mdl-cell--6-col"><label style="font-size: 2em;">This is a textual question</label></div>
+  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
+    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+  </div>
+  </div>
+    </section>
+  </div>
+  <div class="mdl-layout__tab-panel" id="featuress3">
+    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--24dp">
+     <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+        <div class="mdl-card__supporting-text mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
+        </div>
+        </div>
+
+
+    
+    
+        <div class="mdl-card__supporting-text mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
+        </div>
+        </div>
+
+    
+    
+        <div class="mdl-card__supporting-text mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
+        </div>
+        </div>
+
+    
+    
+        <!-- Floating Multiline Textfield -->
+        
+       <div class="mdl-card__supporting-text mdl-grid">
+       <div class="mdl-cell mdl-cell--6-col"><label style="font-size: 2em;">This is a textual question</label></div>
+  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
+    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+  </div>
+  </div>
+
+    
+        <div class="mdl-card__supporting-text mdl-grid">
+       <div class="mdl-cell mdl-cell--6-col"><label style="font-size: 2em;">This is a textual question</label></div>
+  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
+    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+  </div>
+  </div>
+    </section>
+  </div>
+  <div class="mdl-layout__header-row">
+  </div>
+  <footer class="mdl-mega-footer">
+    <div class="mdl-mega-footer--bottom-section">
+      <div class="mdl-logo">
+        IIIT ALLAHABAD | Developed by:
+        <a href="http://anupamdagar.me" style="color: white;text-decoration: none;"> Anupam Dagar</a>
+      </div>
+    </div>
+  </footer>
+</main>
+</div>
+
+<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+<script type="text/javascript">
+(function($) {
+  $("body").addClass("mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base");
+  })(jQuery);
+</script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<!-- Built with love using Web Starter Kit -->
+{% endblock %}

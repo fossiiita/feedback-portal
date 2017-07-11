@@ -1,5 +1,6 @@
 {% extends 'portal/base.html' %}
 {% load staticfiles %}
+{% load widget_tweaks %}
 {% block title %}Portal-Login{% endblock %}
 {% block extend_head %}
 		<link rel="stylesheet" href="{% static 'css/home.css' %}" />
@@ -11,12 +12,13 @@
 					<h1><strong>LOGIN</strong></h1>
 					<h3>using LDAP</h3>
 					<form method="post" action="#">
+					{% csrf_token %}
 								<div class="row uniform 50%">
 									<div class="12u 12u$(xsmall)">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Username" />
+									{% render_field form.username placeholder="Username" id="demo-name" style="color: black;" %}
 									</div>
 									<div class="12u$ 12u$(xsmall)">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Password" />
+									{% render_field form.password placeholder="Password" style="color: black;" %}
 									</div>
 									<div class="12u$">
 										<ul class="actions">

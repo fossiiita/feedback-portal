@@ -6,3 +6,9 @@ from django.http import HttpResponse
 # Create your views here.
 def home(request):
 	return render(request, 'portal/home.html', {})
+
+#def student(request):
+#	return render(request, 'portal/student_view.html', {})
+
+def fill(request):
+	return render(request, 'portal/student_view.html', {})

@@ -1,0 +1,105 @@
+{% extends 'portal/base.html' %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+{% block title %}Portal-View{% endblock %}
+{% block extend_head %}
+		<link rel="stylesheet" href="{% static 'css/student_view.css' %}" />
+{% endblock %}
+{% block content %}
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<h1><strong>Welcome</strong></h1>
+					<h3>USERNAME</h3>
+
+				</div>
+				<nav id="nav">
+					<ul>
+						<li><a href="/" class="active">View courses</a></li>
+						<li><a href="/">Logout</a></li>
+						<li></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2 style="text-align: center;">Courses You Are Currently Enrolled In</h2>
+							<h3 style="text-align: center;">Click On The Respective Course To Give Feedback</h3>
+						</header>
+					</section>
+
+						<section>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Serial No.</th>
+											<th>Course Code</th>
+											<th>Course Name</th>
+											<th>Professor</th>
+											<th>Feedback Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>IDST230C</td>											
+											<td>Data Structure</td>
+											<td>Dr. Rahul Kala</td>
+											<td>Not Given</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>IDST230C</td>
+											<td>Data Structure</td>
+											<td>Dr. Rahul Kala</td>
+											<td>Not Given</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>IDST230C</td>
+											<td>Data Structure</td>
+											<td>Dr. Rahul Kala</td>
+											<td>Not Given</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>IDST230C</td>
+											<td>Data Structure</td>
+											<td>Dr. Rahul Kala</td>
+											<td>Not Given</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>IDST230C</td>
+											<td>Data Structure</td>
+											<td>Dr. Rahul Kala</td>
+											<td>Not Given</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" style="margin-top: 16em;">
+				<div class="inner">
+					<ul class="copyright">
+						<li>IIIT Allahabad</li><li>Developed By: <a href="http://anupamdagar.me">Anupam Dagar</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static 'js/jquery.poptrox.min.js' %}"></script>
+			<script src="{% static 'js/skel.min.js' %}"></script>
+			<script src="{% static 'js/util.js' %}"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="{% static 'js/main.js' %}"></script>
+{% endblock %}
