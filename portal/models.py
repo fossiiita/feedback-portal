@@ -36,6 +36,7 @@ class Professor_And_Students(models.Model):
 		return self.course_name.name + ' - ' + self.professor.user.username
 
 class Feedback_Theory(models.Model):
+	user = models.ForeignKey(settings.AUTH_USER_MODEL)
 	student = models.ForeignKey(Professor_And_Students)
 	mcq_1 = models.IntegerField()
 	mcq_2 = models.IntegerField()
@@ -53,7 +54,7 @@ class Feedback_Lab(models.Model):
 	mcq_2 = models.IntegerField()
 	mcq_3 = models.IntegerField()
 	textual_question_1 = models.CharField(max_length=500)
-	textual_question_2 = models.CharField(max_length=500)
+	textual_question_2 = models.CharField(max_length=600)
 	feedback_given_at = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):

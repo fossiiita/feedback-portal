@@ -47,7 +47,7 @@
     <header class="mdl-layout__header mdl-layout__header--scroll mdl-layout__header--transparent">
       <div class="mdl-layout__header-row">
 
-       <span class="mdl-layout-title">Welcome {{request.user}}</span>
+       <span class="mdl-layout-title">Welcome USERNAME</span>
        <div class="mdl-layout-spacer"></div>
        <nav class="mdl-navigation">
         <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="/">LOGOUT</a>
@@ -67,19 +67,15 @@
 </header>
 <main class="mdl-layout__content">
   <div class="mdl-layout__tab-panel is-active" id="overview">
-  <form method="POST">
-  {% csrf_token %}
     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--24dp">
       <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
         <div class="mdl-card__supporting-text mdl-grid">
         <div class="mdl-cell mdl-cell--6-col">
           <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
-  }
 </div>
 <div class="mdl-cell mdl-cell--6-col">
-{% render_field form.student %}
-{% render_field form.mcq_1 %}
-        
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
         </div>
         </div>
 
@@ -91,7 +87,8 @@
           <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
 </div>
 <div class="mdl-cell mdl-cell--6-col">
-          {% render_field form.mcq_2 %}
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
         </div>
         </div>
 
@@ -102,7 +99,8 @@
           <label for="mcq1" style="font-size: 2em;">here is a sample question which must be answered</label>
 </div>
 <div class="mdl-cell mdl-cell--6-col">
-          {% render_field form.mcq_3 %}
+          <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="10" value="5" step="2" id="mcq1">
         </div>
         </div>
 
@@ -113,7 +111,7 @@
        <div class="mdl-card__supporting-text mdl-grid">
        <div class="mdl-cell mdl-cell--6-col"><label style="font-size: 2em;">This is a textual question</label></div>
   <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
-    {% render_field form.textual_question_1 %}
+    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
     <label class="mdl-textfield__label" for="sample5">Text lines...</label>
   </div>
   </div>
@@ -122,17 +120,13 @@
         <div class="mdl-card__supporting-text mdl-grid">
        <div class="mdl-cell mdl-cell--6-col"><label style="font-size: 2em;">This is a textual question</label></div>
   <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
-    {% render_field form.textual_question_2 %}
+    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
     <label class="mdl-textfield__label" for="sample5">Text lines...</label>
   </div>
   </div>
-<!-- Accent-colored raised button with ripple -->
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
-  SUBMIT
-</button>
+
     
 </section>
-</form>
   </div>
   <div class="mdl-layout__tab-panel" id="featuress">
     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--24dp">
